@@ -1,0 +1,36 @@
+%list {
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+%conteiner {
+  max-width: 1600px;
+  padding: 60px 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    min-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 1200px;
+    // padding: 0 15px;
+  }
+}
+%section {
+  @media screen and(min-width:1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+%hiden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}

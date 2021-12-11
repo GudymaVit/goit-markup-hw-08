@@ -1,0 +1,193 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 450px;
+  max-width: 100%;
+  height: 600px;
+  max-height: 100%;
+  padding: 40px;
+  background: $bacground-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 1;
+  transition-property: opacity, transform;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1);
+  overflow-y: auto;
+
+  @media screen and (min-width: 1200px) {
+    height: 581px;
+    max-height: 100%;
+    width: 528px;
+    max-width: 100%;
+  }
+}
+.backdrop.is-hidden .modal {
+  opacity: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%) scale(1.5, 0.2);
+}
+.modal__title {
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $title-text-color;
+}
+/*поля ввода*/
+.order-form__item {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.order-form__label {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: $primary-text-color;
+}
+.order-form__input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 12px 11px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 4px;
+  outline-color: $accent-color;
+  transition-property: border;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+}
+.order-form__cell {
+  position: relative;
+}
+.order-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  fill: $title-text-color;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition-property: fill;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .order-form__input:focus + & {
+    fill: $accent-color;
+  }
+}
+.order-form__textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  resize: none;
+  outline-color: $accent-color;
+  transition-property: border;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+/*підтвердження*/
+.check {
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 34px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  color: $primary-text-color;
+}
+.check__input {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.check__icon {
+  position: absolute;
+  margin-left: -23px;
+  margin-top: 4px;
+  width: 16px;
+  height: 15px;
+  background-color: #ffffff;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition-property: border, bacground-color;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .check__input:focus + & {
+    border: 0.9px solid $accent-color;
+  }
+  .check__input:checked + & {
+    background-color: $accent-color;
+    border: $accent-color;
+    background-image: url(../../images/check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}
+
+.proviso {
+  margin-left: 5px;
+  text-decoration-line: underline;
+  color: $accent-color;
+}
+/*кнопка відправити*/
+.submit-btn {
+  display: block;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  color: #ffffff;
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+/*кнопка закрити*/
+.modal-btn {
+  @include flexCenter(flex);
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: #000000;
+  transition-property: fill;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}

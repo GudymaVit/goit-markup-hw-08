@@ -1,0 +1,29 @@
+.social__list {
+  @extend %list;
+  @include flexCenter(flex);
+}
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social__item {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social__links {
+  @include flexCenter(flex);
+  width: 100%;
+  height: 100%;
+  background: none;
+  background-color: #ffffff;
+  fill: rgba(175, 177, 184, 1);
+  border-radius: 50%;
+  transition-property: fill, background-color;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    fill: #ffffff;
+  }
+}

@@ -1,0 +1,32 @@
+$primary-text-color: #757575;
+$title-text-color: #212121;
+$accent-color: #2196f3;
+$bacground-color: #ffffff;
+$secondary-bacground-color: #f5f4fa;
+$transition-duration: 250ms;
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+body {
+  font-family: Roboto, sans-serif;
+  color: $primary-text-color;
+  background-color: $bacground-color;
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  // @media screen and (min-width: 768px) {
+  //   max-width: 354px;
+  // }
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
