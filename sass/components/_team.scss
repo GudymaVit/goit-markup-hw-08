@@ -1,5 +1,5 @@
 .team {
-  @extend %section;
+  // @extend %section;
   background-color: $secondary-bacground-color;
 }
 .team-block {
@@ -7,7 +7,7 @@
 }
 .team__title {
   // margin-top: 0px;
-  // margin-bottom: 50px;
+
   margin-bottom: 30px;
   font-weight: bold;
   font-size: 36px;
@@ -15,6 +15,9 @@
   text-align: center;
   letter-spacing: 0.03em;
   color: $title-text-color;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 .team__list {
   // @include flexCenter(flex);
@@ -74,3 +77,4 @@
   letter-spacing: 0.03em;
   color: $primary-text-color;
 }
+

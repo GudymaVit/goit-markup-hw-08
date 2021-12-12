@@ -17,13 +17,14 @@
 .footer-block {
   @extend %conteiner;
   @media screen and (min-width: 1200px) {
+    padding: 60px 15px;
     display: flex;
     align-items: baseline;
   }
 }
 .footer-nav {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-left: 60px;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 60px;
   }
 }
 .footer-connection {
@@ -58,16 +59,11 @@
 .social__list {
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: start;
   }
 }
 .page-footer--social {
   @media screen and (max-width: 767px) {
     margin-bottom: 60px;
-    margin-top: 60px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    padding-right: 75px;
   }
   @media screen and (min-width: 1200px) {
     margin-left: 70px;
@@ -91,8 +87,8 @@
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
-    padding-bottom: 60px;
+    justify-content: space-around;
+    margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;

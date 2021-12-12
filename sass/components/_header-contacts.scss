@@ -21,7 +21,7 @@
   @media screen and (min-width: 1200px) {
     @include flexCenter(flex);
     font-size: 14px;
-    line-height: 1.15;
+    line-height: 1.14;
   }
 }
 .header-contacts {
@@ -33,7 +33,7 @@
   }
 }
 .header-contacts__item {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding: 0;
     margin: 0;
     &:not(:last-child) {
