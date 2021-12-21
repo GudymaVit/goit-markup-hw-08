@@ -380,6 +380,10 @@ ul {
   top: 15px;
 }
 
+.menu-container .menu-toggle:hover, .menu-container .menu-toggle:focus {
+  fill: #2196f3;
+}
+
 /*навігація по сторінці*/
 .mobile-menu {
   display: -webkit-box;
@@ -396,6 +400,7 @@ ul {
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow-y: scroll;
 }
 
 .mobile-nav__item:not(:last-child) {
@@ -421,22 +426,34 @@ ul {
 }
 
 .mobile-contacts__link {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
-  color: #757575;
   text-decoration: none;
+  color: #757575;
+}
+
+@media screen and (min-widht: 480px) and (max-width: 767px) {
+  .mobile-contacts__link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: #757575;
+  }
 }
 
 .mobile-contacts__link--tel {
   display: inline-block;
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-contacts__link--tel {
+    font-size: 34px;
+  }
 }
 
 /*social*/
@@ -458,11 +475,17 @@ ul {
 
 .mobile-social__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
   text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .mobile-social__link {
+    font-size: 18px;
+  }
 }
 
 .hero {
@@ -1265,7 +1288,6 @@ ul {
   left: 50%;
   width: 450px;
   max-width: 100%;
-  height: 600px;
   max-height: 100%;
   padding: 40px;
   background: #ffffff;

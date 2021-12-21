@@ -42,6 +42,10 @@
   position: absolute;
   right: 15px;
   top: 15px;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 /*навігація по сторінці*/
 .mobile-menu {
@@ -53,6 +57,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  overflow-y: scroll;
 }
 .mobile-nav {
   @extend %list;
@@ -80,22 +85,28 @@
 .mobile-contacts__item {
 }
 .mobile-contacts__link {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
-
-  color: #757575;
   text-decoration: none;
+  color: #757575;
+  @media screen and (min-widht: 480px) and (max-width: 767px) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+
+    color: #757575;
+  }
 }
 .mobile-contacts__link--tel {
   display: inline-block;
   margin-bottom: 32px;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 /*social*/
 .mobile-social {
@@ -114,10 +125,13 @@
 }
 .mobile-social__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 1.22;
   letter-spacing: 0.02em;
 
   color: #2196f3;
   text-decoration: none;
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
 }
